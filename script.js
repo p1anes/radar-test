@@ -13,8 +13,13 @@ function removeExistingLineAndHeading() {
     }
 }
 
+
+radar.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+});
+
 radar.addEventListener('mousedown', (e) => {
-    if (e.button === 0 || e.button === 2) { // 0: left-click, 2: right-click
+    if (e.button === 0 || e.button === 2) { 
         removeExistingLineAndHeading();
 
         const rect = radar.getBoundingClientRect();
@@ -27,8 +32,6 @@ radar.addEventListener('mousedown', (e) => {
         line.style.left = `${startX}px`;
         line.style.top = `${startY}px`;
         radar.appendChild(line);
-
-        e.preventDefault(); // Prevent context menu on right-click
     }
 });
 
@@ -52,10 +55,10 @@ radar.addEventListener('mousemove', (e) => {
     line.style.width = `${length}px`;
     line.style.transform = `rotate(${angle}deg)`;
 
-    if (e.buttons === 1) { // Left-click (heading)
+    if (e.buttons === 1) { 
         const displayedAngle = (angle + 90) % 360;
         displayHeadingText(`${padNumber(Math.round(displayedAngle))}°`, (startX + currentX) / 2, (startY + currentY) / 2);
-    } else if (e.buttons === 2) { // Right-click (distance)
+    } else if (e.buttons === 2) { 
         const distanceInNauticalMiles = (length / 39.92) * 0.6447084;
         displayHeadingText(`${distanceInNauticalMiles.toFixed(2)} NM`, (startX + currentX) / 2, (startY + currentY) / 2);
     }
