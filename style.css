@@ -5,6 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif; 
 }
 
 #radar {
@@ -45,9 +46,11 @@ body {
 .heading {
     position: absolute;
     background-color: white;
-    padding: 2px 5px;
-    border: 1px solid black;
-    border-radius: 3px;
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 10px;
     transform: translate(-50%, -50%);
     z-index: 3;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; 
 }
