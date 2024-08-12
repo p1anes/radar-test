@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     display: flex;
@@ -9,15 +8,14 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-
 #info-modal {
-    display: none; 
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
+    background: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -25,17 +23,28 @@ body {
 
 .modal-content {
     background: white;
-    padding: 20px;
-    border-radius: 15px;
-    max-width: 500px;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 600px;
     width: 90%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
 .controls, .information {
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: left;
+}
+
+.controls strong, .information strong {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .controls ul, .information ul {
@@ -44,23 +53,24 @@ body {
 }
 
 .controls li, .information li {
-    margin: 5px 0;
+    margin: 10px 0;
+    font-size: 16px;
 }
 
 button {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
+    padding: 15px 25px;
+    border-radius: 12px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
+    margin-top: 20px;
 }
 
 button:hover {
     background-color: #0056b3;
 }
-
 
 #radar {
     position: relative;
@@ -91,7 +101,7 @@ button:hover {
 
 .line {
     position: absolute;
-    height: 4px;
+    height: 6px;
     background-color: yellow;
     transform-origin: top left;
     z-index: 2;
@@ -100,11 +110,12 @@ button:hover {
 .heading {
     position: absolute;
     background-color: white;
-    padding: 5px 10px;
+    padding: 10px 15px;
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 15px;
     transform: translate(-50%, -50%);
     z-index: 3;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
