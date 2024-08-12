@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     display: flex;
@@ -5,8 +6,61 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;
 }
+
+
+#info-modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.controls, .information {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.controls ul, .information ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.controls li, .information li {
+    margin: 5px 0;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
 
 #radar {
     position: relative;
@@ -52,5 +106,5 @@ body {
     transform: translate(-50%, -50%);
     z-index: 3;
     font-weight: bold;
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;
 }
